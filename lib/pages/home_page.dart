@@ -4,6 +4,7 @@ import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:to_do_app/widgets/addTodoDialog.dart';
+import 'package:to_do_app/widgets/completed_list_widget.dart';
 import 'package:to_do_app/widgets/todoWidget.dart';
 import 'package:to_do_app/widgets/todo_list_widget.dart';
 
@@ -20,7 +21,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     final tabs = [
       TodoListWidget(),
-      Container(),
+      CompletedListWidget(),
     ];
     return Scaffold(
       appBar: AppBar(

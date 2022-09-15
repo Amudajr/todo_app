@@ -1,24 +1,23 @@
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'package:to_do_app/model/todo_model.dart';
 import 'package:to_do_app/providers/todo.dart';
 import 'package:to_do_app/widgets/todoWidget.dart';
 
-class TodoListWidget extends StatelessWidget {
-  const TodoListWidget({Key? key}) : super(key: key);
+class CompletedListWidget extends StatelessWidget {
+  const CompletedListWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     final provider = Provider.of<TodosProvider>(context);
-    final todos = provider.todos;
+    final todos = provider.todosCompleted;
 
     return todos.isEmpty
         ? Center(
             child: Text(
-              "No Todo Task.",
+              "No Completed Task.",
               style: GoogleFonts.poppins(fontSize: 20),
             ),
           )
